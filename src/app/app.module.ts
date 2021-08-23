@@ -8,6 +8,7 @@ import { StoreModule } from '@ngrx/store';
 import { appReducers } from './app.reducer';
 
 //Modulos
+import { ChartsModule } from 'ng2-charts';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule } from '@angular/fire/compat';
@@ -26,6 +27,7 @@ import { DetalleComponent } from './ingreso-egreso/detalle/detalle.component';
 import { FooterComponent } from './share/footer/footer.component';
 import { NavbarComponent } from './share/navbar/navbar.component';
 import { SidebarComponent } from './share/sidebar/sidebar.component';
+import { OrdenIngresoPipe } from './pipes/orden-ingreso.pipe';
 
 
 @NgModule({
@@ -39,9 +41,11 @@ import { SidebarComponent } from './share/sidebar/sidebar.component';
     DetalleComponent,
     FooterComponent,
     NavbarComponent,
-    SidebarComponent
+    SidebarComponent,
+    OrdenIngresoPipe
   ],
   imports: [
+    ChartsModule,
     BrowserModule, 
     AppRoutingModule, 
     ReactiveFormsModule,
